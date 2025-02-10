@@ -1,8 +1,16 @@
 import { Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BookList from './component/BookList/BookList.tsx';
+import { Book } from './types.ts';
+import axios from 'axios';
+
+
 function App() {
-  const books = [{ name: 'Refactoring' }, { name: 'Domain-driven design' }];
+  const [books, setBooks] = useState<Book[]>([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8080/books').then(res => setBooks(res.data));
+  }, [])
 
   return (
     <div>
@@ -12,6 +20,7 @@ function App() {
       <BookList books={books} />
     </div>
   );
+
 }
 
 
