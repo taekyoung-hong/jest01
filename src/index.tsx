@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.tsx';
-import { BrowserRouter } from 'react-router-dom'; //사용을 위해 import 해주고
-
+import { Provider } from 'react-redux';
+import store from './store';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
 
+root.render(
+  <Provider store={store}>
+    <Router>
+      <App />
+    </Router>
+  </Provider>
+);
 

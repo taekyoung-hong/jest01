@@ -1,18 +1,16 @@
-import React from "react";
 import { screen, render } from "@testing-library/react";
-import BookList from "./component/BookList/BookList.tsx";
+import BookList from "./BookList";
+import React from "react";
 import { MemoryRouter as Router } from "react-router-dom";
 
-describe('BookList', () => {
-
-
-    const renderWithRouter = (component: JSX.Element) => {
-        return {
-            ...render(<Router>{component}</Router>),
-        };
+const renderWithRouter = (component: JSX.Element) => {
+    return {
+        ...render(<Router>{component}</Router>),
     };
+};
 
 
+describe('BookList', () => {
     it('render books', async () => {
         const props = {
             books: [
