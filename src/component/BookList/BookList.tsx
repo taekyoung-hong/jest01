@@ -12,4 +12,3 @@ const BookList = ({ books }: { books: Book[] }) => {
 }
 
 export default BookList;
-
