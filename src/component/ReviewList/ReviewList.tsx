@@ -1,10 +1,14 @@
+import React from "react";
 import { Review } from "../../types"
+import ReviewItem from "./ReviewItem";
 
 const ReviewList = ({ reviews }: { reviews: Review[] }) => {
     return <div data-testid="reviews-container">
         {reviews.map((review) => (
-            <div data-testid="review" key={review.id}>{review.content}</div>
+            <ReviewItem key={review.id} review={review} />
         ))}
+
     </div>
 }
+
 export default ReviewList;

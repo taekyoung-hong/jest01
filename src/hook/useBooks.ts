@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import { Book } from "../types";
 
 export const useBooks = () => {
-  const [books, setBooks] = useState<Book[]>([]);
+  const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
-
   const [term, setTerm] = useState<string>('');
 
   useEffect(() => {
@@ -26,8 +25,6 @@ export const useBooks = () => {
   }, [term])
 
   return {
-    loading,
-    error,
     books,
     term,
     setTerm

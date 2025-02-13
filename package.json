@@ -9,6 +9,7 @@
     "@mui/material": "^6.4.3",
     "@reduxjs/toolkit": "^2.5.1",
     "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
     "cra-template-typescript": "1.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -16,6 +17,7 @@
     "react-router": "^7.1.5",
     "react-router-dom": "^6.29.0",
     "react-scripts": "5.0.1",
+    "stub-server": "^0.1.4",
     "web-vitals": "^3.5.2"
   },
   "scripts": {
@@ -46,10 +48,12 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^14.3.1",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "chai": "^5.1.2",
     "concurrently": "^9.1.2",
     "cypress": "^14.0.2",
+    "jest": "^27.5.1",
     "json-server": "^0.17.4"
   }
 }

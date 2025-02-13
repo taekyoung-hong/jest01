@@ -5,10 +5,13 @@ import axios from "axios";
 export const fetchBookDetails = createAsyncThunk<Book, string>(
     "bookDetails/fetch",
     async (id) => {
+        console.log(`📡 Fetching book details for ID: ${id}`);
         const response = await axios.get(`http://localhost:8080/books/${id}`);
+        console.log("📡 API Response:", response.data);
         return response.data;
     }
 );
+
 
 type BookDetailType = {
     book: Book;

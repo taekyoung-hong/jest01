@@ -5,7 +5,7 @@ export type Book = {
     reviews?: Review[];
 }
 
-
+//...
 export type Review = {
     id: number;
     bookId: number;
@@ -13,5 +13,3 @@ export type Review = {
     date: string;
     content: string;
 }
-
-

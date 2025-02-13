@@ -8,7 +8,7 @@
       "lib": ["es5", "dom"],
       "types": ["cypress", "node", "@testing-library/jest-dom"]
     },
-    "include": ["**/*.ts", "src/ReviewList.test.tsx"]
+    "include": ["**/*.ts", "src/ReviewList.test.tsx", "src/component/ReviewList/ReviewItem.test.tsx"]
   }
 
   

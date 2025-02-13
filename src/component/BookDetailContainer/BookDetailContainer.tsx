@@ -11,17 +11,24 @@ import { fetchBookDetails } from "../../bookDetailSlice.tsx";
 
 const BookDetailContainer = () => {
     const { id = "" } = useParams<string>();
+    console.log("useParams id:", id);
     const { book } = useSelector((state: RootState) => ({
         book: state.detail.book,
     }));
     const dispatch = useDispatch<AppDispatch>();
-
+    
     useEffect(() => {
-        dispatch(fetchBookDetails((id)));
-    }, [dispatch]);
+        console.log("useEffect 실행됨!", id);
+        if (id) {
+            console.log("Dispatching fetchBookDetails for ID:", id);
+            dispatch(fetchBookDetails(id));
+        }
+    }, [dispatch, id]);
+
 
     return <BookDetail book={book} />;
 };
+
 
 
 
